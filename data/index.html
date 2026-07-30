@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="B">
+    <meta name="description" content="Webpage to control, receive and send data to an esp32-S3 car.">
+    <meta name="theme-color" content="#1e40af">
+
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <title>ESP32-S3 Car Control</title>
+</head>
+<body>
+    <div class="telemetry-container">
+        <div class="telemetry-title">Telemetry</div>
+        <div class="telemetry-item">Distance: <span id="tele-distance" class="telemetry-value">-- mm</span></div>
+        <div class="telemetry-item">Servo Angle: <span id="tele-servo" class="telemetry-value">--°</span></div>
+        <div class="telemetry-item">Mode: <span id="tele-mode" class="telemetry-value">--</span></div>
+    </div>
+
+    <h2>ESP32-S3 CAR</h2>
+    
+    <div id="status-container">
+        <span id="status-dot" class="dot"></span><span id="status-text">Disconnected</span>
+    </div>
+
+    <div class="grid">
+        <button class="mode" onclick="send('MODE')">Change Mode</button>
+        
+        <div class="empty"></div>
+        <button onclick="send('F')">F</button>
+        <div class="empty"></div>
+        
+        <button onclick="send('L')">L</button>
+        <button class="stop" onclick="send('S')">STOP</button>
+        <button onclick="send('R')">R</button>
+        
+        <div class="empty"></div>
+        <button onclick="send('B')">B</button>
+        <div class="empty"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

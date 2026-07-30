@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Autnomous_CarV.2",
+			"path": "."
+		},
+		{
+			"name": "260701-174756-esp32-s3-devkitm-1",
+			"path": "../260701-174756-esp32-s3-devkitm-1"
+		}
+	],
+	"settings": {}
+}
